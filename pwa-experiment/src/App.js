@@ -1,40 +1,55 @@
 import React, { Component } from "react";
-import { Router, browserHistory, Route, Link } from "react-router";
+import { Router, browserHistory, Route } from "react-router";
 import "./App.css";
-import Header from "./components/Header";
 
-const Page = ({ title }) => (
+import Header from "./components/Header";
+import NavBar from "./components/NavBar";
+
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Services from "./pages/Services";
+import Contact from "./pages/Contact";
+
+const HomeLink = props => (
   <div className="App">
-    <div className="App-header">
-      <Header title="NavBar" />
-    </div>
-    <p className="App-intro">This is the {title} page.</p>
-    <p>
-      <Link to="/">Home</Link>
-    </p>
-    <p>
-      <Link to="/about">About</Link>
-    </p>
-    <p>
-      <Link to="/settings">Settings</Link>
-    </p>
+    <NavBar title="Home" />
+    <Header title="Pagina inicial" />
+    <Home />;
   </div>
 );
-
-const Home = props => <Page title="Guilherme" />;
-
-const About = props => <Page title="About" />;
-
-const Settings = props => <Page title="Settings" />;
+const AboutLink = props => (
+  <div className="App">
+    <NavBar title="Home" />
+    <Header title="Sobre" />
+    <About />;
+  </div>
+);
+const ServicesLink = props => (
+  <div className="App">
+    <NavBar title="Home" />
+    <Header title="Serviços" />
+    <Services />;
+  </div>
+);
+const ContactLink = props => (
+  <div className="App">
+    <NavBar title="Home" />
+    <Header title="Contato" />
+    <Contact />;
+  </div>
+);
 
 class App extends Component {
   render() {
     return (
-      <Router history={browserHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-        <Route path="/settings" component={Settings} />
-      </Router>
+      <div>
+        <Router history={browserHistory}>
+          <Route path="/" component={HomeLink} />
+          <Route path="/about" component={AboutLink} />
+          <Route path="/services" component={ServicesLink} />
+          <Route path="/contact" component={ContactLink} />
+        </Router>
+      </div>
     );
   }
 }
