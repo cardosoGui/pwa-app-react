@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Material Icons";
+  font-style: normal;
+  font-weight: 400;
+  src: url(../src/icons/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local("Material Icons"), local("MaterialIcons-Regular"),
+    url(../src/icons/MaterialIcons-Regular.woff2) format("woff2"),
+    url(../src/icons/MaterialIcons-Regular.woff) format("woff"),
+    url(../src/icons/MaterialIcons-Regular.ttf) format("truetype");
+}
+
 .App {
   text-align: center;
 }

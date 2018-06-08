@@ -10,8 +10,10 @@ function NavBar(props) {
     <div>
       <SideNav
         trigger={
-          <div className="navbar-button">
-            <Button floating style={{ position: "fixed" }} icon="menu" />
+          <div className="navbar-background">
+            <div className="navbar-button">
+              <Button floating style={{ position: "fixed" }} icon="menu" />
+            </div>
           </div>
         }
         options={{ closeOnClick: true }}

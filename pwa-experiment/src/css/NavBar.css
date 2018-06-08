@@ -3,3 +3,10 @@
   margin: 0.5em 0;
   left: 1em;
 }
+.navbar-background {
+  position: fixed;
+  background-color: blue;
+  border-radius: 1em 0 1em;
+  height: 5em;
+  width: 100%;
+}
