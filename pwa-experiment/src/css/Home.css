@@ -1,0 +1,16 @@
+.home-container {
+  display: flex;
+}
+.home-content-background {
+  width: 100%;
+}
+.home-card {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.home-body {
+  position: sticky;
+  padding: 2em;
+}

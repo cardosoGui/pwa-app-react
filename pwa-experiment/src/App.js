@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router, browserHistory, Route } from "react-router";
+
 import "./App.css";
 
 import Header from "./components/Header";
@@ -14,28 +15,28 @@ const HomeLink = props => (
   <div className="App">
     <NavBar title="Home" />
     <Header title="Pagina inicial" />
-    <Home />;
+    <Home />
   </div>
 );
 const AboutLink = props => (
   <div className="App">
     <NavBar title="Home" />
     <Header title="Sobre" />
-    <About />;
+    <About />
   </div>
 );
 const ServicesLink = props => (
   <div className="App">
     <NavBar title="Home" />
     <Header title="Serviços" />
-    <Services />;
+    <Services />
   </div>
 );
 const ContactLink = props => (
   <div className="App">
     <NavBar title="Home" />
     <Header title="Contato" />
-    <Contact />;
+    <Contact />
   </div>
 );
 

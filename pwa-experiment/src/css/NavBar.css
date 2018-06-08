@@ -1,9 +1,5 @@
-.nav-bar-menu {
-  padding: 1em 0 0;
-}
-.nav-bar-animation {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  background-color: red;
+.navbar-button {
+  position: absolute;
+  margin: 0.5em 0;
+  left: 1em;
 }
