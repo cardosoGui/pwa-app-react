@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Router, browserHistory, Route } from "react-router";
+import { Chat } from "react-chat-popup";
 
 import "./App.css";
 
@@ -41,9 +42,18 @@ const ContactLink = props => (
 );
 
 class App extends Component {
+  // componentDidMount() {
+  //   addResponseMessage("Seja bem vindo ao meu site!");
+  // }
+  // handleNewUserMessage = newMessage => {
+  //   console.log(`New message incomig! ${newMessage}`);
+  //   // Now send the message throught the backend API
+  //   addResponseMessage(response);
+  // };
   render() {
     return (
       <div>
+        <Chat handleNewUserMessage={this.handleNewUserMessage} />
         <Router history={browserHistory}>
           <Route path="/" component={HomeLink} />
           <Route path="/about" component={AboutLink} />

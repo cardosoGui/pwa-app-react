@@ -1,5 +1,11 @@
 import React from "react";
-import { SideNav, SideNavItem, Button } from "react-materialize";
+import {
+  SideNav,
+  SideNavItem,
+  Button,
+  Navbar,
+  NavItem
+} from "react-materialize";
 import { Link } from "react-router";
 import "../css/NavBar.css";
 import back from "../img/back.jpg";
@@ -8,12 +14,14 @@ import dog from "../img/dog.jpg";
 function NavBar(props) {
   return (
     <div>
+      <Navbar className="navbar-menu-default" brand="Seu Logo" left>
+        <NavItem href="#">Getting started</NavItem>
+        <NavItem href="#">Components</NavItem>
+      </Navbar>
       <SideNav
         trigger={
-          <div className="navbar-background">
-            <div className="navbar-button">
-              <Button floating style={{ position: "fixed" }} icon="menu" />
-            </div>
+          <div className="navbar-button">
+            <Button floating style={{ position: "fixed" }} icon="menu" />
           </div>
         }
         options={{ closeOnClick: true }}
@@ -43,7 +51,7 @@ function NavBar(props) {
         <SideNavItem subheader>Crie seu App</SideNavItem>
         <SideNavItem>Site & Aplicativo</SideNavItem>
       </SideNav>
-      <Button
+      {/* <Button
         floating
         fab="horizontal"
         icon="mode_edit"
@@ -55,7 +63,7 @@ function NavBar(props) {
         <Button floating icon="format_quote" className="yellow darken-1" />
         <Button floating icon="publish" className="green" />
         <Button floating icon="attach_file" className="blue" />
-      </Button>
+      </Button> */}
     </div>
   );
 }
